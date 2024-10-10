@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkzora_story=self.webpackChunkzora_story||[]).push([[1903],{1912:o=>{o.exports=JSON.parse('{"blogBasePath":"/zora-story/blog","blogTitle":"Blog","authorsListPath":"/zora-story/blog/authors"}')}}]);

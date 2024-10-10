@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkzora_story=self.webpackChunkzora_story||[]).push([[3071],{8032:o=>{o.exports=JSON.parse('{"metadata":{"permalink":"/zora-story/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
