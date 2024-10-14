@@ -3,7 +3,7 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'Zora StudyHouse',
+  title: 'JK StudyHouse',
   tagline: 'Always walking and thinking',
   favicon: 'img/favicon.ico',
 
@@ -11,12 +11,12 @@ const config: Config = {
   url: 'https://github.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/zora_story',
+  baseUrl: '/jk_story',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'Programmer-JK', // Usually your GitHub org/user name.
-  projectName: 'zora_story', // Usually your repo name.
+  projectName: 'jk_story', // Usually your repo name.
   deploymentBranch : 'deploy-branch',
 
   onBrokenLinks: 'throw',
@@ -65,7 +65,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    // image: 'img/docusaurus-social-card.jpg',
     navbar: {
       title: 'My Site',
       logo: {

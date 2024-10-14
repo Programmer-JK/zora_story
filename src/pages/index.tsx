@@ -32,8 +32,8 @@ export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      // title={`zora StudyHouse`}
-      description="Zora StudyHouse <head />"
+      // title={`jk StudyHouse`}
+      description="jk StudyHouse <head />"
       >
       <HomepageHeader />
       <main>
