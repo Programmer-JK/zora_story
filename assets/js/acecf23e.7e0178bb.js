@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkjk_story=self.webpackChunkjk_story||[]).push([[1903],{1912:s=>{s.exports=JSON.parse('{"blogBasePath":"/zora_story/blog","blogTitle":"Blog","authorsListPath":"/zora_story/blog/authors"}')}}]);

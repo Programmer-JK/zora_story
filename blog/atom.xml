@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://github.com/zora_story/blog</id>
-    <title>Zora StudyHouse Blog</title>
+    <title>JK StudyHouse Blog</title>
     <updated>2021-08-26T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://github.com/zora_story/blog"/>
-    <subtitle>Zora StudyHouse Blog</subtitle>
+    <subtitle>JK StudyHouse Blog</subtitle>
     <icon>https://github.com/zora_story/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
