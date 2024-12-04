@@ -1,6 +1,5 @@
-# Vue.js 완벽 가이드: 핵심 개념부터 실전 활용까지
-
 ## 목차
+
 1. [Vue.js 소개](#1-vuejs-소개)
 2. [Vue.js vs React: 프레임워크 비교 분석](#2-vuejs-vs-react-프레임워크-비교-분석)
 3. [Vue.js의 핵심 개념](#3-vuejs의-핵심-개념)
@@ -38,11 +37,13 @@ Vue.js 코어
 ### 2.1 Vue.js의 강점
 
 1. **낮은 진입 장벽**
+
    - HTML, CSS, JavaScript 기본 지식만으로 시작 가능
    - 직관적인 템플릿 문법
    - 상세한 공식 문서
 
 2. **유연한 통합**
+
    - 기존 프로젝트에 점진적 적용 가능
    - CDN 방식부터 SPA까지 다양한 적용 방식
    - 서드파티 라이브러리와의 호환성
@@ -55,6 +56,7 @@ Vue.js 코어
 ### 2.2 React 대비 한계점
 
 1. **생태계 규모**
+
    - 더 작은 커뮤니티 크기
    - 써드파티 라이브러리 선택의 제한
    - 기업용 솔루션 부족
@@ -70,37 +72,37 @@ Vue.js 코어
 ```javascript
 // 컴포넌트 정의
 export default {
-  name: 'MyComponent',
-  
+  name: "MyComponent",
+
   // 데이터 속성
   data() {
     return {
       count: 0,
-      message: 'Hello Vue!'
-    }
+      message: "Hello Vue!",
+    };
   },
 
   // 계산된 속성
   computed: {
     doubleCount() {
-      return this.count * 2
-    }
+      return this.count * 2;
+    },
   },
 
   // 감시자
   watch: {
     count(newVal, oldVal) {
-      console.log(`Count changed from ${oldVal} to ${newVal}`)
-    }
+      console.log(`Count changed from ${oldVal} to ${newVal}`);
+    },
   },
 
   // 메서드
   methods: {
     increment() {
-      this.count++
-    }
-  }
-}
+      this.count++;
+    },
+  },
+};
 ```
 
 ### 3.2 주요 디렉티브
@@ -108,14 +110,16 @@ export default {
 ```html
 <!-- 데이터 바인딩 -->
 <div v-bind:id="dynamicId"></div>
-<div :id="dynamicId"></div> <!-- 축약형 -->
+<div :id="dynamicId"></div>
+<!-- 축약형 -->
 
 <!-- 이벤트 핸들링 -->
 <button v-on:click="handleClick"></button>
-<button @click="handleClick"></button> <!-- 축약형 -->
+<button @click="handleClick"></button>
+<!-- 축약형 -->
 
 <!-- 양방향 바인딩 -->
-<input v-model="message">
+<input v-model="message" />
 
 <!-- 조건부 렌더링 -->
 <div v-if="isVisible">조건부 내용</div>
@@ -123,26 +127,28 @@ export default {
 
 <!-- 리스트 렌더링 -->
 <ul>
-  <li v-for="item in items" :key="item.id">
-    {{ item.name }}
-  </li>
+  <li v-for="item in items" :key="item.id">{{ item.name }}</li>
 </ul>
 ```
 
 ## 4. Vue.js 컴포넌트 생명주기
-![[Pasted image 20241204144047.png]]
+
+![Vue lifecycle](../assets/vue-lifecycle.png)
 
 ### 4.1 생명주기 훅 상세 설명
 
 1. **생성 단계**
+
    - `beforeCreate`: 컴포넌트 초기화 시작
    - `created`: 반응형 데이터 설정 완료
 
 2. **마운트 단계**
+
    - `beforeMount`: DOM 삽입 직전
    - `mounted`: DOM 삽입 완료
 
 3. **업데이트 단계**
+
    - `beforeUpdate`: 데이터 변경, DOM 패치 전
    - `updated`: DOM 패치 완료
 
@@ -156,19 +162,19 @@ export default {
 export default {
   created() {
     // 데이터 초기화, API 호출
-    this.fetchInitialData()
+    this.fetchInitialData();
   },
-  
+
   mounted() {
     // DOM 조작, 라이브러리 초기화
-    this.initializeThirdPartyLib()
+    this.initializeThirdPartyLib();
   },
-  
+
   beforeUnmount() {
     // 리소스 정리
-    this.cleanupResources()
-  }
-}
+    this.cleanupResources();
+  },
+};
 ```
 
 ## 5. Options API vs Composition API
@@ -181,20 +187,20 @@ export default {
 export default {
   data() {
     return {
-      userData: null
-    }
+      userData: null,
+    };
   },
-  
+
   methods: {
     async fetchUser() {
-      this.userData = await api.getUser()
-    }
+      this.userData = await api.getUser();
+    },
   },
-  
+
   mounted() {
-    this.fetchUser()
-  }
-}
+    this.fetchUser();
+  },
+};
 ```
 
 ### 5.2 Composition API
@@ -202,26 +208,26 @@ export default {
 Vue 3에서 도입된 새로운 방식:
 
 ```javascript
-import { ref, onMounted } from 'vue'
+import { ref, onMounted } from "vue";
 
 export default {
   setup() {
-    const userData = ref(null)
-    
+    const userData = ref(null);
+
     const fetchUser = async () => {
-      userData.value = await api.getUser()
-    }
-    
+      userData.value = await api.getUser();
+    };
+
     onMounted(() => {
-      fetchUser()
-    })
-    
+      fetchUser();
+    });
+
     return {
       userData,
-      fetchUser
-    }
-  }
-}
+      fetchUser,
+    };
+  },
+};
 ```
 
 ## 6. Vue.js 상태 관리
@@ -230,51 +236,51 @@ export default {
 
 ```javascript
 // store/index.js
-import { createStore } from 'vuex'
+import { createStore } from "vuex";
 
 export default createStore({
   state: {
-    count: 0
+    count: 0,
   },
-  
+
   mutations: {
     INCREMENT(state) {
-      state.count++
-    }
+      state.count++;
+    },
   },
-  
+
   actions: {
     increment({ commit }) {
-      commit('INCREMENT')
-    }
+      commit("INCREMENT");
+    },
   },
-  
+
   getters: {
-    doubleCount: state => state.count * 2
-  }
-})
+    doubleCount: (state) => state.count * 2,
+  },
+});
 ```
 
 ### 6.2 Pinia (Vue 3 권장 상태 관리)
 
 ```javascript
-import { defineStore } from 'pinia'
+import { defineStore } from "pinia";
 
-export const useCounterStore = defineStore('counter', {
+export const useCounterStore = defineStore("counter", {
   state: () => ({
-    count: 0
+    count: 0,
   }),
-  
+
   actions: {
     increment() {
-      this.count++
-    }
+      this.count++;
+    },
   },
-  
+
   getters: {
-    doubleCount: (state) => state.count * 2
-  }
-})
+    doubleCount: (state) => state.count * 2,
+  },
+});
 ```
 
 ## 7. 성능 최적화 전략
@@ -282,6 +288,7 @@ export const useCounterStore = defineStore('counter', {
 ### 7.1 컴포넌트 최적화
 
 1. **keep-alive 사용**
+
 ```html
 <keep-alive>
   <component :is="currentComponent" />
@@ -289,11 +296,13 @@ export const useCounterStore = defineStore('counter', {
 ```
 
 2. **지연 로딩**
+
 ```javascript
-const MyComponent = () => import('./MyComponent.vue')
+const MyComponent = () => import("./MyComponent.vue");
 ```
 
 3. **computed 속성 활용**
+
 ```javascript
 computed: {
   expensiveOperation() {
@@ -305,6 +314,7 @@ computed: {
 ### 7.2 렌더링 최적화
 
 1. **v-show vs v-if**
+
 ```html
 <!-- 자주 토글되는 경우 -->
 <div v-show="isVisible">자주 변경되는 내용</div>
@@ -314,6 +324,7 @@ computed: {
 ```
 
 2. **key 속성 최적화**
+
 ```html
 <template v-for="item in items" :key="item.id">
   <MyComponent :data="item" />
@@ -325,6 +336,7 @@ computed: {
 ### 8.1 XSS 방어
 
 1. **템플릿 이스케이핑**
+
 ```html
 <!-- 안전 -->
 <div>{{ userInput }}</div>
@@ -334,16 +346,17 @@ computed: {
 ```
 
 2. **CSP 설정**
+
 ```javascript
 // vue.config.js
 module.exports = {
-  chainWebpack: config => {
-    config.plugin('html').tap(args => {
-      args[0].CSP = true
-      return args
-    })
-  }
-}
+  chainWebpack: (config) => {
+    config.plugin("html").tap((args) => {
+      args[0].CSP = true;
+      return args;
+    });
+  },
+};
 ```
 
 ### 8.2 데이터 검증
@@ -365,11 +378,13 @@ props: {
 ### 9.1 적합한 사용 케이스
 
 1. **중소규모 웹 애플리케이션**
+
    - 관리자 대시보드
    - 이커머스 플랫폼
    - 소셜 미디어 애플리케이션
 
 2. **점진적 마이그레이션이 필요한 프로젝트**
+
    - 레거시 jQuery 애플리케이션
    - 모놀리식 백엔드 템플릿
 
