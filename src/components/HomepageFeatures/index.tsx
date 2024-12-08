@@ -1,51 +1,37 @@
-import clsx from 'clsx';
-import Heading from '@theme/Heading';
-import styles from './styles.module.css';
+import clsx from "clsx";
+import Heading from "@theme/Heading";
+import styles from "./styles.module.css";
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  Image: ImageData;
   description: JSX.Element;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Regular Routine',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    description: (
-      <>
-      7H Sleep, <br></br>
-      7M Remind, <br></br>
-      70M Exercise, <br></br>
-      7 Study
-      </>
-    ),
+    title: "Regular Routine",
+    Image: require("@site/static/img/main_1.jpg").default,
+    description: <></>,
   },
   {
-    title: 'Keep Studying',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-
-      </>
-    ),
+    title: "Keep Studying",
+    Image: require("@site/static/img/main_2.jpg").default,
+    description: <></>,
   },
   {
-    title: 'Never Give-up',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-
-      </>
-    ),
+    title: "Never Give-up",
+    Image: require("@site/static/img/main_3.jpg").default,
+    description: <></>,
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({ title, Image, description }: FeatureItem) {
+  console.log(Image);
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx("col col--4")}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <img className={styles.featureSvg} src={Image} role="img" />
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
