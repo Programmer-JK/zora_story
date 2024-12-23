@@ -1,6 +1,6 @@
-# onChange와 useEffect의 주요 차이점과 성능 특성
+onChange와 useEffect의 주요 차이점과 성능 특성을 설명해드리겠습니다:
 
-### onChange
+## onChange
 1. 특징:
 - 이벤트가 발생할 때마다 직접적으로 실행
 - 사용자 입력에 즉각적인 응답 가능
@@ -19,7 +19,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 - 불필요한 렌더링 없음
 - 즉각적인 상태 업데이트 가능
 
-### useEffect
+## useEffect
 1. 특징:
 - 의존성 배열의 값이 변경될 때마다 실행
 - 렌더링 이후에 비동기적으로 실행
@@ -38,7 +38,7 @@ useEffect(() => {
 - 추가적인 렌더링 사이클 발생 가능
 - 비동기 작업에 적합
 
-### 사용 시나리오 비교:
+## 사용 시나리오 비교:
 
 1. onChange가 더 적합한 경우:
 ```typescript
@@ -67,7 +67,7 @@ useEffect(() => {
 - 구독 관리
 - 타이머 관리
 
-### 성능 최적화 예시:
+## 성능 최적화 예시:
 
 1. onChange + useEffect 조합:
 ```typescript

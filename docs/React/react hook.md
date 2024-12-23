@@ -1,9 +1,10 @@
-# React hooks
+# What is React Hooks
 React Hooks는 React 16.8 버전에서 도입된 기능으로, 함수형 컴포넌트에서 상태(state) 관리와 생명주기(lifecycle) 기능을 사용할 수 있게 해주는 기능입니다.
 
 주요 Hook들을 살펴보겠습니다:
 
-1. useState
+# How to use React Hooks
+## 1. useState
 ```javascript
 const [state, setState] = useState(initialValue);
 ```
@@ -22,7 +23,7 @@ return (
 );
 ```
 
-2. useEffect
+## 2. useEffect
 ```javascript
 useEffect(() => {
   // 실행할 효과
@@ -46,7 +47,7 @@ useEffect(() => {
 }, [count]); // count가 변경될 때만 실행
 ```
 
-3. useRef
+## 3. useRef
 ```javascript
 const refContainer = useRef(initialValue);
 ```
@@ -65,21 +66,21 @@ return (
 );
 ```
 
-4. useContext
+## 4. useContext
 ```javascript
 const value = useContext(MyContext);
 ```
 - Context API를 통해 전역 상태를 관리할 수 있습니다
 - 컴포넌트 트리 전체에 데이터를 전달할 수 있습니다
 
-5. useMemo
+## 5. useMemo
 ```javascript
 const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
 ```
 - 계산 비용이 큰 값을 메모이제이션합니다
 - 의존성 배열의 값이 변경될 때만 재계산됩니다
 
-6. useCallback
+## 6. useCallback
 ```javascript
 const memoizedCallback = useCallback(
   () => {
@@ -91,12 +92,12 @@ const memoizedCallback = useCallback(
 - 함수를 메모이제이션하여 불필요한 리렌더링을 방지합니다
 - 주로 자식 컴포넌트에 콜백을 전달할 때 사용합니다
 
-Hook 사용 시 주의사항:
+## Hook 사용 시 주의사항:
 1. Hook은 항상 함수형 컴포넌트 최상위에서만 호출해야 합니다
 2. 조건문이나 반복문 안에서 Hook을 사용하면 안됩니다
 3. Custom Hook을 만들 때는 이름이 'use'로 시작해야 합니다
 
-Custom Hook 예시:
+## Custom Hook 예시:
 ```javascript
 function useWindowSize() {
   const [size, setSize] = useState({
