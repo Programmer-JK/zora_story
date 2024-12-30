@@ -1,7 +1,7 @@
 ---
 slug: /create-jaden-case-string
 ---
-
+>작성일 : 2024.12.03
 # JadenCase 문자열 만들기
 
 ## 문제 설명

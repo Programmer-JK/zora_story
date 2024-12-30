@@ -1,3 +1,4 @@
+>작성일 : 2024.12.22
 # What is React Hooks
 React Hooks는 React 16.8 버전에서 도입된 기능으로, 함수형 컴포넌트에서 상태(state) 관리와 생명주기(lifecycle) 기능을 사용할 수 있게 해주는 기능입니다.
 

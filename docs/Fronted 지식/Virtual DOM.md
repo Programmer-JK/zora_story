@@ -1,4 +1,4 @@
-
+>작성일 : 2024.10.14
 #### Virtual DOM의 개념에 대해 설명하세요
 Virtual DOM은 웹 성능을 최적화하기 위해 사용되는 DOM 관리 방법으로, 웹 어플리케이션의 상태 변경 시, 객체 형태의 가상 DOM을 통해 변경된 부분만 찾아내어 이를 실제 DOM에 적용하는 기능을 합니다. Virtual DOM의 동작 순서는 Diffing과 Reconiliation, 크게 두 가지로 구분할 수 있는데, Diffing이란, Virtual DOM에서 변경점을 찾아내는 과정을 의미하며, Reconciliation이란, 찾아낸 변경점을 실제 DOM에 적용하는 과정을 의미합니다. 
 

@@ -1,3 +1,5 @@
+>작성일 : 2024.12.03
+
 ## 1. NFS(Network File System) 설정
 
 ### Ubuntu 서버 설정

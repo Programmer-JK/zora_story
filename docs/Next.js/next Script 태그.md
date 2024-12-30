@@ -1,3 +1,5 @@
+>작성일 : 2024.12.20
+
 Next.js의 `next/script`와 HTML의 일반 `<script>` 태그를 비교해드리겠습니다:
 
 ## next/script

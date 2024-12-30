@@ -1,0 +1,32 @@
+>작성일 : 2024.12.16
+
+
+"Proper Type Definition"은 "적절한/올바른 타입 정의"라는 뜻입니다.
+
+TypeScript에서 `any` 타입을 사용하는 것 대신, 구체적이고 정확한 타입을 정의하는 것을 의미합니다.
+
+예를 들어:
+
+```typescript
+// BAD: any 사용
+interface Window {
+  Kakao: any;  // 모든 타입을 허용 = 타입 안정성이 떨어짐
+}
+
+// GOOD: proper type definition
+interface Window {
+  Kakao: {
+    init: (key: string) => void;
+    Auth: {
+      authorize: (options: { redirectUri: string }) => void;
+    };
+    isInitialized: () => boolean;
+  }
+}
+```
+
+Proper Type Definition을 사용하면:
+1. 코드 자동완성 지원
+2. 타입 관련 오류를 미리 잡을 수 있음
+3. 코드의 의도가 명확해짐
+4. 실수를 줄일 수 있음

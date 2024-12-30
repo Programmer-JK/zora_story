@@ -1,3 +1,4 @@
+>작성일 : 2024.11.13
 ## 목차
 1. [Data](#1-Data)
 2. [Computed](#2-Computed)
