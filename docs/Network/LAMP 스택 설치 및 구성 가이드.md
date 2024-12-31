@@ -1,8 +1,9 @@
->작성일 : 2024.12.03
-
 # LAMP 스택 설치 및 구성 가이드
 
+> 작성일 : 2024.12.03
+
 ## 1. 기본 시스템 준비
+
 ```bash
 # 시스템 업데이트
 sudo apt update
@@ -12,6 +13,7 @@ sudo apt upgrade -y
 ## 2. 주요 구성요소 설치
 
 ### Nginx 웹서버
+
 ```bash
 sudo apt install nginx -y
 sudo systemctl start nginx
@@ -19,6 +21,7 @@ sudo systemctl enable nginx
 ```
 
 ### MySQL 데이터베이스
+
 ```bash
 # 설치
 sudo apt install mysql-server -y
@@ -30,6 +33,7 @@ sudo mysql_secure_installation
 ```
 
 ### PHP 및 모듈
+
 ```bash
 # 기본 설치
 sudo apt install php-fpm php-mysql -y
@@ -45,6 +49,7 @@ sudo systemctl enable php8.1-fpm
 ## 3. Nginx 구성
 
 ### 기본 설정
+
 ```nginx
 server {
     listen 80 default_server;
@@ -68,6 +73,7 @@ server {
 ## 4. MySQL 권한 관리
 
 ### 사용자 관리
+
 ```sql
 -- 사용자 생성
 CREATE USER '사용자'@'localhost' IDENTIFIED BY '비밀번호';
@@ -82,6 +88,7 @@ FLUSH PRIVILEGES;
 ```
 
 ### 원격 접속 설정
+
 ```bash
 # MySQL 설정
 bind-address = 0.0.0.0
@@ -93,12 +100,14 @@ sudo ufw allow 3306/tcp
 ## 5. 보안 설정
 
 ### 파일 권한
+
 ```bash
 sudo chown -R www-data:www-data /var/www/html
 sudo chmod -R 755 /var/www/html
 ```
 
 ### 방화벽 관리
+
 ```bash
 # Ubuntu/Debian
 sudo ufw status
@@ -115,6 +124,7 @@ sudo firewall-cmd --reload
 ## 6. 연결 테스트
 
 ### 서비스 상태 확인
+
 ```bash
 # 웹서버
 sudo nginx -t
@@ -128,6 +138,7 @@ sudo systemctl status mysql
 ```
 
 ### MySQL 연결 테스트
+
 ```bash
 # 로컬 테스트
 mysql -u root -p
@@ -138,12 +149,15 @@ nc -zv 서버IP 3306
 ```
 
 ## 7. 문제 해결
+
 1. 로그 확인
+
    - Nginx: `/var/log/nginx/error.log`
    - PHP: `/var/log/php8.1-fpm.log`
    - MySQL: `/var/log/mysql/error.log`
 
 2. 권한 문제
+
    - 파일 소유권 재설정
    - SELinux 설정 확인 (CentOS)
 
@@ -154,6 +168,7 @@ nc -zv 서버IP 3306
 ## 8. MySQL 상세 설정
 
 ### 사용자 권한 관리
+
 ```sql
 -- 권한 조회
 SHOW GRANTS FOR '사용자'@'localhost';
@@ -163,12 +178,13 @@ SELECT user, host FROM mysql.user;
 ALTER USER '사용자'@'localhost' IDENTIFIED BY '새비밀번호';
 
 -- 불필요한 계정 정리
-DELETE FROM mysql.user 
+DELETE FROM mysql.user
 WHERE NOT (user = '보존할사용자' AND host = '보존할호스트')
   AND user != 'root';
 ```
 
 ### 보안 설정
+
 ```sql
 -- 원격 root 로그인 비활성화
 DELETE FROM mysql.user WHERE User='root' AND Host NOT IN ('localhost', '127.0.0.1', '::1');
@@ -183,6 +199,7 @@ DROP DATABASE IF EXISTS test;
 ## 9. PHP-FPM 상세 설정
 
 ### www.conf 설정
+
 ```ini
 # /etc/php/8.1/fpm/pool.d/www.conf
 [www]
@@ -202,6 +219,7 @@ pm.max_spare_servers = 3
 ```
 
 ### php.ini 주요 설정
+
 ```ini
 # /etc/php/8.1/fpm/php.ini
 memory_limit = 256M
@@ -216,6 +234,7 @@ error_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT
 ## 10. 모니터링 및 디버깅
 
 ### MySQL 모니터링
+
 ```sql
 -- 현재 연결 상태
 SHOW PROCESSLIST;
@@ -230,6 +249,7 @@ SHOW STATUS LIKE 'Questions';
 ```
 
 ### PHP 모니터링
+
 ```bash
 # PHP-FPM 상태 페이지 설정
 location /status {
@@ -245,6 +265,7 @@ location /status {
 ## 11. 성능 최적화
 
 ### MySQL 튜닝
+
 ```ini
 # /etc/mysql/my.cnf
 innodb_buffer_pool_size = 1G
@@ -254,6 +275,7 @@ innodb_flush_method = O_DIRECT
 ```
 
 ### Nginx 튜닝
+
 ```nginx
 # worker_processes 설정
 worker_processes auto;
@@ -270,6 +292,7 @@ gzip_types text/plain text/css application/json application/javascript;
 ```
 
 ## 12. SELinux 구성 (CentOS/RHEL)
+
 ```bash
 # SELinux 상태 확인
 sestatus
@@ -286,6 +309,7 @@ setsebool -P httpd_can_network_connect 1
 ## 13. SSL/TLS 설정
 
 ### Let's Encrypt 인증서 설치
+
 ```bash
 # Certbot 설치
 sudo apt install certbot python3-certbot-nginx
@@ -298,6 +322,7 @@ sudo certbot renew --dry-run
 ```
 
 ### Nginx SSL 설정
+
 ```nginx
 server {
     listen 443 ssl http2;
@@ -305,7 +330,7 @@ server {
 
     ssl_certificate /etc/letsencrypt/live/example.com/fullchain.pem;
     ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem;
-    
+
     # SSL 최적화
     ssl_session_timeout 1d;
     ssl_session_cache shared:SSL:50m;
@@ -318,6 +343,7 @@ server {
 ## 14. 백업 설정
 
 ### MySQL 백업
+
 ```bash
 # 자동 백업 스크립트
 #!/bin/bash
@@ -330,6 +356,7 @@ find $BACKUP_DIR -name "full_backup_*.sql" -mtime +7 -delete
 ```
 
 ### 웹 데이터 백업
+
 ```bash
 # 웹 디렉토리 백업
 tar -czf /backup/www/website_$DATE.tar.gz /var/www/html/
@@ -342,6 +369,7 @@ tar -czf /backup/config/php_$DATE.tar.gz /etc/php/
 ## 15. 로그 관리
 
 ### 로그 순환 설정
+
 ```bash
 # /etc/logrotate.d/nginx
 /var/log/nginx/*.log {
@@ -360,6 +388,7 @@ tar -czf /backup/config/php_$DATE.tar.gz /etc/php/
 ```
 
 ### 로그 모니터링
+
 ```bash
 # 실시간 로그 모니터링
 tail -f /var/log/nginx/error.log

@@ -1,6 +1,9 @@
+> 작성일 : 2024.12.25
+
 ## 1. Git 초기 설정
 
 ### 기본 설정
+
 ```bash
 # 사용자 정보 설정
 git config --global user.name "Your Name"
@@ -21,6 +24,7 @@ git config --global alias.st status
 ```
 
 ### 저장소 생성
+
 ```bash
 # 새 저장소 생성
 git init
@@ -40,6 +44,7 @@ git push -u origin main
 ## 2. 파일 관리
 
 ### 기본 명령어
+
 ```bash
 # 파일 상태 확인
 git status
@@ -60,6 +65,7 @@ git rm --cached <파일명>  # 원격 저장소에서만 삭제
 ```
 
 ### 변경사항 관리
+
 ```bash
 # 변경사항 확인
 git diff
@@ -75,6 +81,7 @@ git show <커밋해시>
 ## 3. 브랜치 관리
 
 ### 기본 작업
+
 ```bash
 # 브랜치 목록
 git branch          # 로컬
@@ -96,6 +103,7 @@ git branch -D <브랜치명>  # 강제 삭제
 ```
 
 ### 병합 작업
+
 ```bash
 # 브랜치 병합
 git merge <브랜치명>
@@ -112,6 +120,7 @@ git cherry-pick <커밋해시>
 ## 4. 원격 저장소 관리
 
 ### 기본 작업
+
 ```bash
 # 원격 저장소 확인
 git remote -v
@@ -128,6 +137,7 @@ git push origin <브랜치명>
 ```
 
 ### 고급 작업
+
 ```bash
 # 강제 푸시 (주의!)
 git push -f origin <브랜치명>
@@ -163,6 +173,7 @@ git stash apply stash@{n}
 ## 6. 히스토리 관리
 
 ### 로그 확인
+
 ```bash
 # 커밋 이력 조회
 git log
@@ -173,6 +184,7 @@ git log --since="1 week ago"
 ```
 
 ### 되돌리기
+
 ```bash
 # 마지막 커밋 수정
 git commit --amend

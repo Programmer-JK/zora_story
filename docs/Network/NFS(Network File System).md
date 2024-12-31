@@ -1,8 +1,13 @@
->작성일 : 2024.12.03
+---
+slug: /NFS
+---
+
+> 작성일 : 2024.12.03
 
 ## 1. NFS(Network File System) 설정
 
 ### Ubuntu 서버 설정
+
 ```bash
 # NFS 서버 설치 및 설정
 sudo apt update
@@ -20,6 +25,7 @@ sudo systemctl restart nfs-kernel-server
 ```
 
 ### CentOS 클라이언트 설정
+
 ```bash
 # NFS 클라이언트 설치
 sudo yum install nfs-utils
@@ -35,6 +41,7 @@ echo "서버IP:/var/www    /var/www    nfs    defaults    0 0" | sudo tee -a /et
 ```
 
 ### Ubuntu 클라이언트 설정
+
 ```bash
 # 1. NFS 클라이언트 설치
 sudo apt update
