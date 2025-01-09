@@ -8,7 +8,7 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://github.com',
+  url: 'https://programmer-jk.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/zora_story',
@@ -26,7 +26,7 @@ const config: Config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
+    defaultLocale: 'ko',
     locales: ['en', 'ko'],
   },
 
@@ -36,10 +36,26 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          // editUrl:
-          //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // editUrl: 'https://github.com/Programmer-JK/zora_story/tree/main/',
+          
+          // MDX 설정 추가
+          remarkPlugins: [
+            [require('remark-mdx'), { 
+              commonmark: true,
+              mdExtensions: ['.mdx', '.md']  // MDX와 MD 파일 모두 처리
+            }]
+          ],
+          
+          // MDX 파서 옵션
+          rehypePlugins: [
+            [require('@mapbox/rehype-prism'), { 
+              ignoreMissing: true,  // 누락된 언어 하이라이팅 무시
+            }]
+          ],
+          
+          // 기본 플러그인 실행 전에 적용할 설정
+          beforeDefaultRemarkPlugins: [],
+          beforeDefaultRehypePlugins: []
         },
         blog: {
           showReadingTime: true,
@@ -64,13 +80,11 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    // image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
+      title: 'JK StudyHouse',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'JK StudyHouse Site Logo',
+        src: 'img/favicon.ico',
       },
       items: [
         {
