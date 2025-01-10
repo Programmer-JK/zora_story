@@ -22,9 +22,6 @@ const config: Config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'ko',
     locales: ['en', 'ko'],
@@ -38,7 +35,6 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           // editUrl: 'https://github.com/Programmer-JK/zora_story/tree/main/',
           
-          // MDX 설정 추가
           remarkPlugins: [
             [require('remark-mdx'), { 
               commonmark: true,
@@ -46,7 +42,7 @@ const config: Config = {
             }]
           ],
           
-          // MDX 파서 옵션
+          // MDX 파서 옵션, rehype는 HTML을 처리하는 도구
           rehypePlugins: [
             [require('@mapbox/rehype-prism'), { 
               ignoreMissing: true,  // 누락된 언어 하이라이팅 무시
@@ -54,27 +50,36 @@ const config: Config = {
           ],
           
           // 기본 플러그인 실행 전에 적용할 설정
-          beforeDefaultRemarkPlugins: [],
-          beforeDefaultRehypePlugins: []
-        },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/Programmer-JK/zora_story',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
+          // beforeDefaultRemarkPlugins: [], //Markdown 처리 전에 실행할 플러그인
+          // beforeDefaultRehypePlugins: [] // HTML 처리 전에 실행할 플러그인
         },
         theme: {
           customCss: './src/css/custom.css',
         },
+        // blog: {
+        //   showReadingTime: true, //블로그 포스트에 예상 읽기 시간을 표시
+        //   feedOptions: {
+        //     type: ['rss', 'atom'],
+        //     xslt: true,
+        //   },
+        //   // Please change this to your repo.
+        //   // Remove this to remove the "edit this page" links.
+        //   editUrl:
+        //     'https://github.com/Programmer-JK/zora_story',
+        //   // Useful options to enforce blogging best practices
+        //   onInlineTags: 'warn',
+        //   onInlineAuthors: 'warn',
+        //   onUntruncatedBlogPosts: 'warn',
+        // },
+        // theme: {
+        //   customCss: './src/css/custom.css',
+        // },
+        // sitemap: {
+        //   changefreq: 'weekly',
+        //   priority: 0.5,
+        //   ignorePatterns: ['/tags/**'],
+        //   filename: 'sitemap.xml',
+        // }
       } satisfies Preset.Options,
     ],
   ],
@@ -93,10 +98,14 @@ const config: Config = {
           position: 'left',
           label: 'Study',
         },
-        // {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/Programmer-JK',
           label: 'GitHub',
+          position: 'right',
+        },
+        {
+          href: 'https://portfolio-programmer-jks-projects.vercel.app/',
+          label: 'Portfolio',
           position: 'right',
         },
       ],
@@ -113,33 +122,16 @@ const config: Config = {
             },
           ],
         },
-        // {
-        //   title: 'Community',
-        //   items: [
-        //     {
-        //       label: 'Stack Overflow',
-        //       href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-        //     },
-        //     {
-        //       label: 'Discord',
-        //       href: 'https://discordapp.com/invite/docusaurus',
-        //     },
-        //     {
-        //       label: 'Twitter',
-        //       href: 'https://twitter.com/docusaurus',
-        //     },
-        //   ],
-        // },
         {
           title: 'More',
           items: [
-            // {
-            //   label: 'Blog',
-            //   to: '/blog',
-            // },
             {
               label: 'GitHub',
               href: 'https://github.com/Programmer-JK',
+            },
+            {
+              label: 'Portfolio',
+              href: 'https://portfolio-programmer-jks-projects.vercel.app/',
             },
           ],
         },
@@ -151,6 +143,17 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
+  plugins: [
+    [
+      '@docusaurus/plugin-sitemap',
+      {
+        changefreq: 'weekly',
+        priority: 0.5,
+        ignorePatterns: ['/tags/**'],
+        filename: 'sitemap.xml',
+      },
+    ],
+  ],
 };
 
 export default config;
