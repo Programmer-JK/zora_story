@@ -12,7 +12,7 @@ export function DocsCountTable() {
     const docFolder = doc.id.split("/").at(0);
     docsCount[docFolder] = (docsCount[docFolder] || 0) + 1;
   })
-  
+
   return (
     <div>
       <table className="min-w-full">
@@ -25,7 +25,7 @@ export function DocsCountTable() {
                 문서 수
               </th>
               <th className="px-6 py-3 font-semibold">
-                비율
+                문서 비율
               </th>
             </tr>
           </thead>

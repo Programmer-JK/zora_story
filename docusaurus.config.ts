@@ -28,7 +28,7 @@ const config: Config = {
   },
 
   presets: [
-    [
+    [      
       'classic',
       {
         docs: {
@@ -81,6 +81,7 @@ const config: Config = {
         //   filename: 'sitemap.xml',
         // }
       } satisfies Preset.Options,
+      
     ],
   ],
 
@@ -147,6 +148,7 @@ const config: Config = {
     [
       '@docusaurus/plugin-sitemap',
       {
+        id: 'blog-sitemap',
         changefreq: 'weekly',
         priority: 0.5,
         ignorePatterns: ['/tags/**'],
