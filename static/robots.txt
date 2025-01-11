@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://programmer-jk.github.io/zora_story/sitemap.xml
