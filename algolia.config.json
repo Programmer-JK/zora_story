@@ -1,5 +1,17 @@
 {
-    "index_name": "HGI9XINLTK",
-    "start_urls": ["https://programmer-jk.github.io/zora_story/"],
-    "sitemap_urls": ["https://programmer-jk.github.io/zora_story/sitemap.xml"]
+  "index_name": "HGI9XINLTK",
+  "start_urls": ["https://programmer-jk.github.io/zora_story/"],
+  "sitemap_urls": ["https://programmer-jk.github.io/zora_story/sitemap.xml"],
+  "selectors": {
+    "lvl0": {
+      "selector": "header h1",
+      "global": true,
+      "default_value": "Documentation"
+    },
+    "lvl1": "article h1",
+    "lvl2": "article h2",
+    "lvl3": "article h3",
+    "lvl4": "article h4",
+    "text": "article p, article li, article td:last-child"
+  }
 }
