@@ -86,6 +86,11 @@ const config: Config = {
   ],
 
   themeConfig: {
+    algolia: {
+      appId: 'HGI9XINLTK',
+      apiKey: '44304d001d2e93fa908f044f6c4ed38f', // 공개용 API 키입니다
+      indexName: 'programmer-jkio',
+    },
     navbar: {
       title: 'JK StudyHouse',
       logo: {
