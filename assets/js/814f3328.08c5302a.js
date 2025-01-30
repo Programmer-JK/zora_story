@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkjk_story=self.webpackChunkjk_story||[]).push([[67472],{55513:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"\ube14\ub85c\uadf8 \uae30\ub2a5 \ucd94\uac00","permalink":"/zora_story/blog/blog-function-add","unlisted":false,"date":"2025-01-30T00:00:00.000Z"}]}')}}]);
