@@ -48,38 +48,32 @@ const config: Config = {
               ignoreMissing: true,  // 누락된 언어 하이라이팅 무시
             }]
           ],
-          
-          // 기본 플러그인 실행 전에 적용할 설정
-          // beforeDefaultRemarkPlugins: [], //Markdown 처리 전에 실행할 플러그인
-          // beforeDefaultRehypePlugins: [] // HTML 처리 전에 실행할 플러그인
         },
         theme: {
           customCss: './src/css/custom.css',
         },
-        // blog: {
-        //   showReadingTime: true, //블로그 포스트에 예상 읽기 시간을 표시
-        //   feedOptions: {
-        //     type: ['rss', 'atom'],
-        //     xslt: true,
-        //   },
-        //   // Please change this to your repo.
-        //   // Remove this to remove the "edit this page" links.
-        //   editUrl:
-        //     'https://github.com/Programmer-JK/zora_story',
-        //   // Useful options to enforce blogging best practices
-        //   onInlineTags: 'warn',
-        //   onInlineAuthors: 'warn',
-        //   onUntruncatedBlogPosts: 'warn',
-        // },
-        // theme: {
-        //   customCss: './src/css/custom.css',
-        // },
-        // sitemap: {
-        //   changefreq: 'weekly',
-        //   priority: 0.5,
-        //   ignorePatterns: ['/tags/**'],
-        //   filename: 'sitemap.xml',
-        // }
+        blog: {
+          showReadingTime: true, //블로그 포스트에 예상 읽기 시간을 표시
+          feedOptions: {
+            type: ['rss', 'atom'],
+            xslt: true,
+          },
+          onInlineTags: 'warn',
+          onInlineAuthors: 'warn',
+          onUntruncatedBlogPosts: 'warn',
+        },
+        sitemap: {
+          lastmod: 'date',
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: ['/tags/**'],
+          filename: 'sitemap.xml',
+          createSitemapItems: async (params) => {
+            const {defaultCreateSitemapItems, ...rest} = params;
+            const items = await defaultCreateSitemapItems(rest);
+            return items.filter((item) => !item.url.includes('/page/'));
+          },
+        },
       } satisfies Preset.Options,
       
     ],
@@ -94,12 +88,6 @@ const config: Config = {
       contextualSearch: true,
       // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
       externalUrlRegex: 'external\\.com|domain\\.com',
-
-      // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
-      // replaceSearchResultPathname: {
-      //   from: '/docs/', // or as RegExp: /\/docs\//
-      //   to: '/',
-      // },
 
       // Optional: Algolia search parameters
       searchParameters: {},
@@ -124,6 +112,21 @@ const config: Config = {
           label: 'Study',
         },
         {
+          type: 'dropdown',
+          label: 'Blog',
+          items: [
+            {
+              label: 'Blog',
+              to: '/blog',
+            },
+            {
+              label: 'Archive',
+              to: '/blog/archive',
+            },
+          ],
+          position: 'left',
+        },
+        {
           href: 'https://github.com/Programmer-JK',
           label: 'GitHub',
           position: 'right',
@@ -142,7 +145,7 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Main',
+              label: 'Docs - Main',
               to: '/docs/intro',
             },
           ],
