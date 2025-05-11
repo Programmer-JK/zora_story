@@ -10,7 +10,7 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="JK StudyHouse" href="/zora_story/opensearch.xml"><link rel="stylesheet" href="/zora_story/assets/css/styles.5f9bc57f.css">
-<script src="/zora_story/assets/js/runtime~main.130c6948.js" defer="defer"></script>
+<script src="/zora_story/assets/js/runtime~main.a2a1a52b.js" defer="defer"></script>
 <script src="/zora_story/assets/js/main.b1fcfd6e.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -43,7 +43,7 @@ bind-address <span class="token operator">=</span> <span class="token number">0.
 <span class="token function">sudo</span> systemctl restart mysql
 </code></pre>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="사용자-및-권한-설정">사용자 및 권한 설정<a href="#사용자-및-권한-설정" class="hash-link" aria-label="사용자 및 권한 설정에 대한 직접 링크" title="사용자 및 권한 설정에 대한 직접 링크">​</a></h3>
-<pre tabindex="0" class="codeBlockStandalone_MEMb thin-scrollbar language-sql codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token comment">-- 비밀번호 정 책 설정</span>
+<pre tabindex="0" class="codeBlockStandalone_MEMb thin-scrollbar language-sql codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token comment">-- 비밀번호 정책 설정</span>
 <span class="token keyword">SET</span> <span class="token keyword">GLOBAL</span> validate_password<span class="token punctuation">.</span>policy <span class="token operator">=</span> LOW<span class="token punctuation">;</span>
 <span class="token keyword">SET</span> <span class="token keyword">GLOBAL</span> validate_password<span class="token punctuation">.</span>length <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
 
@@ -67,7 +67,7 @@ FLUSH <span class="token keyword">PRIVILEGES</span><span class="token punctuatio
 <span class="token function">sudo</span> <span class="token function">chmod</span> <span class="token number">777</span> /mnt/nfs_share
 
 <span class="token comment"># NFS 설정</span>
-<span class="token builtin class-name">echo</span> <span class="token string">&quot;/mnt/nfs_share    클라이언트IP(rw,sync,no_subtree_check)&quot;</span> <span class="token operator">|</span> <span class="token function">sudo</span> <span class="token function">tee</span> -a /etc/exports
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;/mnt/nfs_share    클라이  언트IP(rw,sync,no_subtree_check)&quot;</span> <span class="token operator">|</span> <span class="token function">sudo</span> <span class="token function">tee</span> -a /etc/exports
 <span class="token function">sudo</span> exportfs -a
 <span class="token function">sudo</span> systemctl restart nfs-kernel-server
 </code></pre>

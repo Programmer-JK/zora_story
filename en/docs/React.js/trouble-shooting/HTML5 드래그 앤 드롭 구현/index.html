@@ -10,7 +10,7 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="JK StudyHouse" href="/zora_story/en/opensearch.xml"><link rel="stylesheet" href="/zora_story/en/assets/css/styles.5f9bc57f.css">
-<script src="/zora_story/en/assets/js/runtime~main.75e597a0.js" defer="defer"></script>
+<script src="/zora_story/en/assets/js/runtime~main.1e1dfadd.js" defer="defer"></script>
 <script src="/zora_story/en/assets/js/main.27ec7dcc.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -59,7 +59,7 @@
   <span class="token keyword">const</span> <span class="token function-variable function">dropHandler</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">e</span><span class="token operator">:</span> <span class="token maybe-class-name">React</span><span class="token punctuation">.</span><span class="token property-access"><span class="token maybe-class-name">DragEvent</span></span></span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
     e<span class="token punctuation">.</span><span class="token method function property-access">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     
-    <span class="token comment">// 드래그 중인 카드 정보 가 져오기</span>
+    <span class="token comment">// 드래그 중인 카드 정보 가져오기</span>
     <span class="token keyword">const</span> columnId <span class="token operator">=</span> e<span class="token punctuation">.</span><span class="token property-access">dataTransfer</span><span class="token punctuation">.</span><span class="token method function property-access">getData</span><span class="token punctuation">(</span><span class="token string">&quot;columnId&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">const</span> fromState <span class="token operator">=</span> e<span class="token punctuation">.</span><span class="token property-access">dataTransfer</span><span class="token punctuation">.</span><span class="token method function property-access">getData</span><span class="token punctuation">(</span><span class="token string">&quot;fromState&quot;</span><span class="token punctuation">)</span> <span class="token keyword module">as</span> <span class="token maybe-class-name">StateType</span><span class="token punctuation">;</span>
 
@@ -127,7 +127,7 @@
 </ul>
 </li>
 </ol>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4-상태-관리">4. 상태 관리<a href="#4-상태-관리" class="hash-link" aria-label="Direct link to 4. 상태 관리" title="Direct link to 4. 상태 관리">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4-상태-관리">4. 상  태 관리<a href="#4-상태-관리" class="hash-link" aria-label="Direct link to 4. 상태 관리" title="Direct link to 4. 상태 관리">​</a></h2>
 <p>이 프로젝트에서는 Zustand를 사용하여 상태를 관리합니다.</p>
 <pre tabindex="0" class="codeBlockStandalone_MEMb thin-scrollbar language-javascript codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token keyword">const</span> useKanStore <span class="token operator">=</span> <span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter"><span class="token keyword">set</span></span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
   <span class="token literal-property property">projectBoard</span><span class="token operator">:</span> <span class="token punctuation">{</span>

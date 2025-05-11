@@ -10,7 +10,7 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="JK StudyHouse" href="/zora_story/opensearch.xml"><link rel="stylesheet" href="/zora_story/assets/css/styles.5f9bc57f.css">
-<script src="/zora_story/assets/js/runtime~main.130c6948.js" defer="defer"></script>
+<script src="/zora_story/assets/js/runtime~main.a2a1a52b.js" defer="defer"></script>
 <script src="/zora_story/assets/js/main.b1fcfd6e.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -31,7 +31,7 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>handleClick<span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">클릭</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
 </code></pre>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="provider와-렌더링-방식의-관계">Provider와 렌더링 방식의 관계<a href="#provider와-렌더링-방식의-관계" class="hash-link" aria-label="Provider와 렌더링 방식의 관계에 대한 직접 링크" title="Provider와 렌더링 방식의 관계에 대한 직접 링크">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="provider의-역할">Provider의 역할<a href="#provider의-역할" class="hash-link" aria-label="Provider의 역할 에 대한 직접 링크" title="Provider의 역할에 대한 직접 링크">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="provider의-역할">Provider의 역할<a href="#provider의-역할" class="hash-link" aria-label="Provider의 역할에 대 한 직접 링크" title="Provider의 역할에 대한 직접 링크">​</a></h3>
 <p>Jotai나 React Query와 같은 Provider들은 애플리케이션의 상태 관리를 위한 context를 제공합니다. root layout에 Provider를 배치하는 것은 전역 상태 관리를 위한 필수적인 설정입니다.</p>
 <pre tabindex="0" class="codeBlockStandalone_MEMb thin-scrollbar language-typescript codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token comment">// app/layout.tsx</span>
 <span class="token keyword module">export</span> <span class="token keyword module">default</span> <span class="token keyword">function</span> <span class="token function"><span class="token maybe-class-name">RootLayout</span></span><span class="token punctuation">(</span><span class="token punctuation">{</span>
@@ -89,7 +89,7 @@
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="initialstate와-ssg">initialState와 SSG<a href="#initialstate와-ssg" class="hash-link" aria-label="initialState와 SSG에 대한 직접 링크" title="initialState와 SSG에 대한 직접 링크">​</a></h3>
 <p>Provider에 설정된 initialState는 hydration 과정에서 클라이언트에 주입되어 SSG로 동작합니다. 이는 빠른 초기 로딩과 전역 상태 관리라는 두 가지 이점을 모두 얻을 수 있게 해줍니다.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="주의사항">주의사항<a href="#주의사항" class="hash-link" aria-label="주의사항에 대한 직접 링크" title="주의사항에 대한 직접 링크">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="hydration-불일치-방지">Hydration 불일치 방지<a href="#hydration-불일치-방지" class="hash-link" aria-label="Hydration 불일치 방지에 대한 직접 링크" title="Hydration 불일치 방지에 대한 직접 링크">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="hydration- 불일치-방지">Hydration 불일치 방지<a href="#hydration-불일치-방지" class="hash-link" aria-label="Hydration 불일치 방지에 대한 직접 링크" title="Hydration 불일치 방지에 대한 직접 링크">​</a></h3>
 <p>서버와 클라이언트의 initialState는 동일해야 hydration 불일치를 피할 수 있습니다. 불일치가 발생하면 React에서 경고를 표시할 수 있습니다.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="성능-최적화">성능 최적화<a href="#성능-최적화" class="hash-link" aria-label="성능 최적화에 대한 직접 링크" title="성능 최적화에 대한 직접 링크">​</a></h3>
 <ul>

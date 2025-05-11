@@ -10,7 +10,7 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="JK StudyHouse" href="/zora_story/en/opensearch.xml"><link rel="stylesheet" href="/zora_story/en/assets/css/styles.5f9bc57f.css">
-<script src="/zora_story/en/assets/js/runtime~main.75e597a0.js" defer="defer"></script>
+<script src="/zora_story/en/assets/js/runtime~main.1e1dfadd.js" defer="defer"></script>
 <script src="/zora_story/en/assets/js/main.27ec7dcc.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -46,7 +46,7 @@
 <span class="token punctuation">}</span>
 </code></pre>
 <p>이러한 변환을 효율적으로 처리하는 방법을 살펴보겠습니다.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="formdata를-중첩-객체로-변환하는-방법">FormData를 중첩 객체로 변환하는 방법<a href="#formdata를-중첩-객체로-변환하는-방법" class="hash-link" aria-label="Direct link to FormData를 중첩 객체로 변환하는 방법" title="Direct link to FormData를 중첩 객체로 변환  하는 방법">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="formdata를-중첩-객체로-변환하는-방법">FormData를 중첩 객체로 변환하는 방법<a href="#formdata를-중첩-객체로-변환하는-방법" class="hash-link" aria-label="Direct link to FormData를 중첩 객체로 변환하는 방법" title="Direct link to FormData를 중첩 객체로 변환하는 방법">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-중첩-속성-처리하기">1. 중첩 속성 처리하기<a href="#1-중첩-속성-처리하기" class="hash-link" aria-label="Direct link to 1. 중첩 속성 처리하기" title="Direct link to 1. 중첩 속성 처리하기">​</a></h3>
 <p>점 표기법(dot notation)을 해석하여 중첩 객체를 생성하는 핵심 함수입니다:</p>
 <pre tabindex="0" class="codeBlockStandalone_MEMb thin-scrollbar language-javascript codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token keyword">function</span> <span class="token function">setNestedValue</span><span class="token punctuation">(</span><span class="token parameter">obj<span class="token punctuation">,</span> path<span class="token punctuation">,</span> value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -94,7 +94,7 @@
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-관련-필드-결합하기">2. 관련 필드 결합하기<a href="#2-관련-필드-결합하  기" class="hash-link" aria-label="Direct link to 2. 관련 필드 결합하기" title="Direct link to 2. 관련 필드 결합하기">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-관련-필드-결합하기">2. 관련 필드 결합하기<a href="#2-관련-필드-결합하기" class="hash-link" aria-label="Direct link to 2.  관련 필드 결합하기" title="Direct link to 2. 관련 필드 결합하기">​</a></h3>
 <p>때로는 여러 입력 필드의 값을 결합하여 하나의 설정 값으로 만들어야 할 수 있습니다. 예를 들어, 중심점의 X좌표와 Y좌표를 하나의 배열로 결합하거나, 접두사와 접미사를 결합하여 형식 문자열을 만드는 경우입니다:</p>
 <pre tabindex="0" class="codeBlockStandalone_MEMb thin-scrollbar language-javascript codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token comment">// 관련 필드를 식별하고 추적하기 위한 맵 생성</span>
 <span class="token keyword">const</span> combineKeys <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -112,7 +112,7 @@
   <span class="token punctuation">}</span>
   
   combineKeys<span class="token punctuation">.</span><span class="token method function property-access">get</span><span class="token punctuation">(</span>baseKey<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token property-access">values</span><span class="token punctuation">[</span>subKey<span class="token punctuation">]</span> <span class="token operator">=</span> value<span class="token punctuation">;</span>
-  <span class="token keyword control-flow">continue</span><span class="token punctuation">;</span> <span class="token comment">// 이 필드는 일단 건너뜀</span>
+  <span class="token keyword control-flow">continue</span><span class="token punctuation">;</span> <span class="token comment">// 이 필드는 일단 건너  뜀</span>
 <span class="token punctuation">}</span>
 </code></pre>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-결합된-값-처리하기">3. 결합된 값 처리하기<a href="#3-결합된-값-처리하기" class="hash-link" aria-label="Direct link to 3. 결합된 값 처리하기" title="Direct link to 3. 결합된 값 처리하기">​</a></h3>
@@ -159,7 +159,7 @@
   <span class="token function">renderChart</span><span class="token punctuation">(</span>chartOptions<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="설정-저장-및-불러오기">설정 저장 및 불러오기<a href="#설정-저장-및-불러오기" class="hash-link" aria-label="Direct link to 설정 저장 및 불러오기" title="Direct link to 설정 저장 및 불러오기">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="설정-저장-및-불러오기">설정 저장 및 불러 오기<a href="#설정-저장-및-불러오기" class="hash-link" aria-label="Direct link to 설정 저장 및 불러오기" title="Direct link to 설정 저장 및 불러오기">​</a></h3>
 <p>사용자 설정을 저장하고 나중에 불러오는 기능:</p>
 <pre tabindex="0" class="codeBlockStandalone_MEMb thin-scrollbar language-javascript codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token comment">// 설정 저장</span>
 <span class="token keyword">function</span> <span class="token function">saveSettings</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>

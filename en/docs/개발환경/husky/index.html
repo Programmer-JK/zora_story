@@ -10,7 +10,7 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="JK StudyHouse" href="/zora_story/en/opensearch.xml"><link rel="stylesheet" href="/zora_story/en/assets/css/styles.5f9bc57f.css">
-<script src="/zora_story/en/assets/js/runtime~main.75e597a0.js" defer="defer"></script>
+<script src="/zora_story/en/assets/js/runtime~main.1e1dfadd.js" defer="defer"></script>
 <script src="/zora_story/en/assets/js/main.27ec7dcc.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -79,7 +79,7 @@ merge 작업이 종료된 후 실행.</li>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="git-patch란">git patch란?<a href="#git-patch란" class="hash-link" aria-label="Direct link to git patch란?" title="Direct link to git patch란?">​</a></h4>
 <ul>
 <li>git commit을 하나의 파일로 만들 경우 patch 파일이 생성된다. 이는 다른 개발자에게 전달이 가능하다.</li>
-<li><code>git format-patch</code> 명령어를 사용할 시, 적용된 각각의 commit에 대응되는 patch 파일이 생성된다.</li>
+<li><code>git format-patch</code> 명  령어를 사용할 시, 적용된 각각의 commit에 대응되는 patch 파일이 생성된다.</li>
 <li>이렇게 만들어진 파일을 전달받아 다시 commit으로 적용하려면, <code>git am [patch-file]</code> 명령어를 사용하여 commit에 반영시킨다.</li>
 </ul>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="git-rebase란">git rebase란?<a href="#git-rebase란" class="hash-link" aria-label="Direct link to git rebase란?" title="Direct link to git rebase란?">​</a></h4>
@@ -94,7 +94,7 @@ merge 작업이 종료된 후 실행.</li>
 <li>Shell에서 사용 가능한 명령어들의 조합을 모아서 만든 배치 (Batch : 데이터를 일괄적으로 모아서 처리하는 작업) 파일이다.</li>
 <li>즉, OS의 Shell을 사용하여 각 줄의 명령어를 순차적으로 실행시켜주는 인터프리터 방식의 프로그램이다.</li>
 <li>스크립트의 첫 줄에 적힌 <code>#!/bin/bash</code> 에서 <code>#!</code> 은 Shebang이라고 칭하며, 해당 Shell Script 파일을 해석해줄 인터프리터의 절대 경로를 지정한 것이다.</li>
-<li>따라서 <code>#!/bin/bash</code> 의 의미는 해당 파일을 여러 종류의 shell 중 <code>bash</code> 를 통해 실행시키겠다는 의미이다. <code>sh</code> 를 적용하고  싶다면 <code>#!/bin/sh</code> 를 작성하면 된다.</li>
+<li>따라서 <code>#!/bin/bash</code> 의 의미는 해당 파일을 여러 종류의 shell 중 <code>bash</code> 를 통해 실행시키겠다는 의미이다. <code>sh</code> 를 적용하고 싶다면 <code>#!/bin/sh</code> 를 작성하면 된다.</li>
 </ul>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="git-hook-적용">git hook 적용<a href="#git-hook-적용" class="hash-link" aria-label="Direct link to git hook 적용" title="Direct link to git hook 적용">​</a></h4>
 <ul>
@@ -120,7 +120,7 @@ merge 작업이 종료된 후 실행.</li>
 </ol>
 <ul>
 <li>프로젝트 내에 <code>git_hooks</code> 폴더를 만들고, 해당 폴더 내에 사전에 작성한 hook script 파일을 넣어둔다.</li>
-<li>이후 하단의 스크립트를 공유하거나, 다른 사용자가 수동으로 스크립트 파일을 <code>.git/hooks</code> 폴더에 넣으면 된다.</li>
+<li>이후   하단의 스크립트를 공유하거나, 다른 사용자가 수동으로 스크립트 파일을 <code>.git/hooks</code> 폴더에 넣으면 된다.</li>
 <li>하단의 스크립트는 git_hooks 내의 모든 파일을 .git/hooks 디렉토리로 복사 (cp) 하는 명령어를 담고 있다.</li>
 </ul>
 <div class="language-null codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-null codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">#!/bin/bash</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">cp git_hooks/* .git/hooks</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>

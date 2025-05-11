@@ -10,7 +10,7 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="JK StudyHouse" href="/zora_story/en/opensearch.xml"><link rel="stylesheet" href="/zora_story/en/assets/css/styles.5f9bc57f.css">
-<script src="/zora_story/en/assets/js/runtime~main.75e597a0.js" defer="defer"></script>
+<script src="/zora_story/en/assets/js/runtime~main.1e1dfadd.js" defer="defer"></script>
 <script src="/zora_story/en/assets/js/main.27ec7dcc.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -126,7 +126,7 @@ datasource db <span class="token punctuation">{</span>
 <span class="token keyword module">export</span> <span class="token keyword module">default</span> prisma<span class="token punctuation">;</span>
 </code></pre>
 <p>이로써 Prisma 세팅은 완료되었다.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="nextjs-api-구현">Next.js API 구현<a href="#nextjs-api-  구현" class="hash-link" aria-label="Direct link to Next.js API 구현" title="Direct link to Next.js API 구현">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="nextjs-api-구현">Next.js API 구현<a href="#nextjs-api-구현" class="hash-link" aria-label="Direct link to Next.js API 구현" title="Direct link to Next.js API 구현">​</a></h2>
 <p>Next.js 앱에서 내부 API를 사용하려면 <code>/app/api</code> 경로에 로직을 구현하면 된다.</p>
 <p>13 버전부터는 API 파일은 <code>route.js</code> 로 명명해야 한다.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="회원가입signup-구현">회원가입(SignUp) 구현<a href="#회원가입signup-구현" class="hash-link" aria-label="Direct link to 회원가입(SignUp) 구현" title="Direct link to 회원가입(SignUp) 구현">​</a></h3>
@@ -217,7 +217,7 @@ $npm i <span class="token operator">--</span>save<span class="token operator">-<
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><code>findFirst</code> 를 통해 입력받은 <code>username</code> 과 <code>email</code> 컬럼 값이 동일한 유저를 먼저 찾은 후 <code>bcrypt.compare</code> 함수를 통해 비밀번호를 비교한다.</p>
+<p><code>findFirst</code> 를 통해 입력받은 <code>username</code> 과 <code>email</code>   컬럼 값이 동일한 유저를 먼저 찾은 후 <code>bcrypt.compare</code> 함수를 통해 비밀번호를 비교한다.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="로그인-api-테스트">로그인 API 테스트<a href="#로그인-api-테스트" class="hash-link" aria-label="Direct link to 로그인 API 테스트" title="Direct link to 로그인 API 테스트">​</a></h3>
 <p>위에서 만든 api의 request url은 <code>https://localhost:3000/api/signin</code> 이다.
 <img decoding="async" loading="lazy" src="/zora_story/en/assets/images/1-5-eb83532ef1d01ee8c27c4df95ff69c4b.png" width="843" height="415" class="img_ev3q"></p>
@@ -302,7 +302,7 @@ $npm i <span class="token operator">--</span>save<span class="token operator">-<
           로그인하기
         </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
       </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
-      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Socials</span></span> <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
+       </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Socials</span></span> <span class="token punctuation">/&gt;</span></span><span class="token plain-text">
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>

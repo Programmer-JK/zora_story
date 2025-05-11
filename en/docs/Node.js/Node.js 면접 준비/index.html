@@ -10,7 +10,7 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="JK StudyHouse" href="/zora_story/en/opensearch.xml"><link rel="stylesheet" href="/zora_story/en/assets/css/styles.5f9bc57f.css">
-<script src="/zora_story/en/assets/js/runtime~main.75e597a0.js" defer="defer"></script>
+<script src="/zora_story/en/assets/js/runtime~main.1e1dfadd.js" defer="defer"></script>
 <script src="/zora_story/en/assets/js/main.27ec7dcc.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -56,8 +56,8 @@
 <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">&#x27;다음 작업 실행&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="모범답안-1">모범답안<a href="#모범답안-1" class="hash-link" aria-label="Direct link to 모범답안" title="Direct link to 모범답안">​</a></h4>
-<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Node.js는 이벤트 기반 비동기 I/O 모델을 사용합니다.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">1) 메인 스레드는 요청을 받아 작업을 이벤트 루프로 전달합니다</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">2) I/O 작업은 워커 스레드 풀로 위임됩니다</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">3) 비동기로 처리되어 블로킹 없이 다음 요청을 받을 수 있습니다</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">4) 완료된 작업은 콜백으로 처리됩니다</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">실제로 libuv 라이브러리가 이런 비동기 처리를 담당하며, CPU 작업이 많은 경우는 클러스터 모듈로 멀티 프로세스를 활용합니다.</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3-expressjs와-실제-개발">3. Express.js와 실제 개발<a href="#3-expressjs와-실제-개발" class="hash-link" aria-label="Direct link to 3. Express.js와 실제 개발" title="Direct link to 3. Express.js와  실제 개발">​</a></h2>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Node.js는 이벤트 기반 비동기 I/O 모델을 사용합 니다.</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">1) 메인 스레드는 요청을 받아 작업을 이벤트 루프로 전달합니다</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">2) I/O 작업은 워커 스레드 풀로 위임됩니다</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">3) 비동기로 처리되어 블로킹 없이 다음 요청을 받을 수 있습니다</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">4) 완료된 작업은 콜백으로 처리됩니다</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">실제로 libuv 라이브러리가 이런 비동기 처리를 담당하며, CPU 작업이 많은 경우는 클러스터 모듈로 멀티 프로세스를 활용합니다.</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3-expressjs와-실제-개발">3. Express.js와 실제 개발<a href="#3-expressjs와-실제-개발" class="hash-link" aria-label="Direct link to 3. Express.js와 실제 개발" title="Direct link to 3. Express.js와 실제 개발">​</a></h2>
 <p>미들웨어:</p>
 <pre tabindex="0" class="codeBlockStandalone_MEMb thin-scrollbar language-javascript codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><code class="codeBlockLines_e6Vv">app<span class="token punctuation">.</span><span class="token method function property-access">use</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
   <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token string">&#x27;로깅 미들웨어&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -77,7 +77,7 @@ app<span class="token punctuation">.</span><span class="token method function pr
 <p>메모리 누수 관리:</p>
 <ul>
 <li>글로벌 변수 사용 최소화</li>
-<li>이벤트 리스너 제거</li>
+<li>이벤트   리스너 제거</li>
 <li>스트림 종료 처리</li>
 </ul>
 <pre tabindex="0" class="codeBlockStandalone_MEMb thin-scrollbar language-javascript codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token keyword">const</span> stream <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token method function property-access">createReadStream</span><span class="token punctuation">(</span><span class="token string">&#x27;big.file&#x27;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -149,7 +149,7 @@ app<span class="token punctuation">.</span><span class="token method function pr
 <ol>
 <li>URL 베이스 버전:<!-- -->
 <ul>
-<li><code>/api/v1/*</code> 형태로 모든 API에  기본 적용</li>
+<li><code>/api/v1/*</code> 형태로 모든 API에 기본 적용</li>
 <li>명시적이지만 URL이 지저분해짐</li>
 </ul>
 </li>

@@ -10,7 +10,7 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="JK StudyHouse" href="/zora_story/en/opensearch.xml"><link rel="stylesheet" href="/zora_story/en/assets/css/styles.5f9bc57f.css">
-<script src="/zora_story/en/assets/js/runtime~main.75e597a0.js" defer="defer"></script>
+<script src="/zora_story/en/assets/js/runtime~main.1e1dfadd.js" defer="defer"></script>
 <script src="/zora_story/en/assets/js/main.27ec7dcc.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -66,7 +66,7 @@ CHANGE MASTER <span class="token keyword">TO</span>
 <span class="token keyword">START</span> SLAVE<span class="token punctuation">;</span>
 </code></pre>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="4-복제-상태-모니터링-및-문제-해결">4. 복제 상태 모니터링 및 문제 해결<a href="#4-복제-상태-모니터링-및-문제-해결" class="hash-link" aria-label="Direct link to 4. 복제 상태 모니터링 및 문제 해결" title="Direct link to 4. 복제 상태 모니터링 및 문제 해결">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="41-상태-확인-명령어">4.1 상태 확인 명령어<a href="#41-상태-확인-명령어" class="hash-link" aria-label="Direct link to 4.1 상태 확인 명령어" title="Direct link to 4.1 상태 확인 명  령어">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="41-상태-확인-명령어">4.1 상태 확인 명령어<a href="#41-상태-확인-명령어" class="hash-link" aria-label="Direct link to 4.1 상태 확인 명령어" title="Direct link to 4.1 상태 확인 명령어">​</a></h3>
 <pre tabindex="0" class="codeBlockStandalone_MEMb thin-scrollbar language-sql codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token comment">-- 복제 상태 확인</span>
 <span class="token keyword">SHOW</span> SLAVE <span class="token keyword">STATUS</span>\G
 
@@ -101,7 +101,7 @@ CHANGE MASTER <span class="token keyword">TO</span>
 <span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> sample<span class="token punctuation">;</span>
 </code></pre>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="44-문제-해결">4.4 문제 해결<a href="#44-문제-해결" class="hash-link" aria-label="Direct link to 4.4 문제 해결" title="Direct link to 4.4 문제 해결">​</a></h3>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="error-13117-바이너리-로그-관련">Error 13117 (바이너리 로그 관련)<a href="#error-13117-바이너리-로그-관련" class="hash-link" aria-label="Direct link to Error 13117 (바이너리   로그 관련)" title="Direct link to Error 13117 (바이너리 로그 관련)">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="error-13117-바이너리-로그-관련">Error 13117 (바이너리 로그 관련)<a href="#error-13117-바이너리-로그-관련" class="hash-link" aria-label="Direct link to Error 13117 (바이너리 로그 관련)" title="Direct link to Error 13117 (바 이너리 로그 관련)">​</a></h4>
 <pre tabindex="0" class="codeBlockStandalone_MEMb thin-scrollbar language-sql codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token comment">-- Binary 로그 설정 확인</span>
 <span class="token keyword">SHOW</span> VARIABLES <span class="token operator">LIKE</span> <span class="token string">&#x27;expire_logs_days&#x27;</span><span class="token punctuation">;</span>
 
@@ -211,8 +211,8 @@ binlog_expire_logs_seconds <span class="token operator">=</span> <span class="to
 <ol>
 <li>Master와 Slave의 MySQL 버전은 가능한 동일하게 유지</li>
 <li>네트워크 방화벽 설정 확인 (기본 포트: 3306)</li>
-<li>Binary 로그 공간 관리를 위한 주  기적인 모니터링 필요</li>
-<li>복제 지연 발생 시 즉시 원인 파악 및 조치 필요</li>
+<li>Binary 로그 공간 관리를 위한 주기적인 모니터링 필요</li>
+<li>복제 지연 발생 시 즉시 원인 파악 및 조 치 필요</li>
 <li>큰 데이터베이스의 경우 덤프 및 복사 과정에서 시간이 오래 걸릴 수 있음</li>
 </ol>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="7-모범-사례">7. 모범 사례<a href="#7-모범-사례" class="hash-link" aria-label="Direct link to 7. 모범 사례" title="Direct link to 7. 모범 사례">​</a></h2>

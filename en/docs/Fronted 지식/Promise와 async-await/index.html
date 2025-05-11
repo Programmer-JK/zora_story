@@ -10,7 +10,7 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="JK StudyHouse" href="/zora_story/en/opensearch.xml"><link rel="stylesheet" href="/zora_story/en/assets/css/styles.5f9bc57f.css">
-<script src="/zora_story/en/assets/js/runtime~main.75e597a0.js" defer="defer"></script>
+<script src="/zora_story/en/assets/js/runtime~main.1e1dfadd.js" defer="defer"></script>
 <script src="/zora_story/en/assets/js/main.27ec7dcc.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -22,7 +22,7 @@
 비동기 처리가 진행중이면 pending, 성공이면 fulfilled, 실패면 rejected라는 상태값을 가집니다.
 Promise는 비동기 프로그램을 then과 catch의 체이닝을 통해, 보다 간결하게 표현할 수 있도록 ES6에서 새로 도입되었습니다.</p>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="promise-등장-이전에는-어떤-방식으로-비동기-처리를-했는지-설명">Promise 등장 이전에는 어떤 방식으로 비동기 처리를 했는지 설명<a href="#promise-등장-이전에는-어떤-방식으로-비동기-처리를-했는지-설명" class="hash-link" aria-label="Direct link to Promise 등장 이전에는 어떤 방식으로 비동기 처리를 했는지 설명" title="Direct link to Promise 등장 이전에는 어떤 방식으로 비동기 처리를 했는지 설명">​</a></h4>
-<p>Promise 등장 이전에는 비동기 작업을 처리하는 함수에 성공 콜백과, 실패 콜백을 각각 넘겨서 완료 상태에 따른 처리를 했습니다.
+<p>Promise 등장 이전에는 비동기   작업을 처리하는 함수에 성공 콜백과, 실패 콜백을 각각 넘겨서 완료 상태에 따른 처리를 했습니다.
 이런 방식이다 보니, 두개 이상의 비동기 작업이 순서를 갖고 실행되어야 할 때, 콜백 함수 안에 또다른 콜백 함수가 점점 중첩되는 callback hell 현상이 발생하여, 코드 가독성 및 유지보수성 저하의 요인이 되곤 했습니다.</p>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="async-await에-대해-설명해주세요">async-await에 대해 설명해주세요.<a href="#async-await에-대해-설명해주세요" class="hash-link" aria-label="Direct link to async-await에 대해 설명해주세요." title="Direct link to async-await에 대해 설명해주세요.">​</a></h4>
 <p>Promise의 완료를 기다리기 위한 문법으로, async 키워드로 정의한 함수 내에서 호출되는 Promise  앞에 await 키워드를 쓰면, 해당 Promise가 완료될 때까지 코드의 실행을 일시 중단할 수 있습니다.

@@ -10,7 +10,7 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="JK StudyHouse" href="/zora_story/en/opensearch.xml"><link rel="stylesheet" href="/zora_story/en/assets/css/styles.5f9bc57f.css">
-<script src="/zora_story/en/assets/js/runtime~main.75e597a0.js" defer="defer"></script>
+<script src="/zora_story/en/assets/js/runtime~main.1e1dfadd.js" defer="defer"></script>
 <script src="/zora_story/en/assets/js/main.27ec7dcc.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -58,7 +58,7 @@
     <span class="token keyword">async</span> <span class="token function">handleUpdate</span><span class="token punctuation">(</span>formData<span class="token operator">:</span> <span class="token maybe-class-name">TodoType</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token keyword control-flow">try</span> <span class="token punctuation">{</span>
         <span class="token keyword control-flow">await</span> todoApi<span class="token punctuation">.</span><span class="token method function property-access">updateTodo</span><span class="token punctuation">(</span>formData<span class="token punctuation">.</span><span class="token property-access">id</span><span class="token punctuation">,</span> formData<span class="token punctuation">)</span>
-        <span class="token comment">//   상태 업데이트 로직만 남음</span>
+        <span class="token comment">// 상태 업데이트 로직만 남음</span>
       <span class="token punctuation">}</span> <span class="token keyword control-flow">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">error</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>
       <span class="token punctuation">}</span>
@@ -108,7 +108,7 @@
 다른 기능(예: 대시보드)에서도 동일한 Todo API를 사용해야 할 때, store에 의존하지 않고 API 모듈을 직접 활용할 수 있었습니다.</li>
 <li><strong>유지보수성</strong>: API 변경 시 한 곳만 수정하면 됨</li>
 </ol>
-<p>이런 이점들은 당장은 크게 체감되지 않을 수 있지만, 프로젝트가 커질수록 그 가치가 분명해질 것입니다. 특히 팀 프로젝트에서는 이러한 구조화된 접근이 협업을 더 쉽게 만들 어줄 것입니다.</p>
+<p>이런 이점들은 당장은 크게 체감되지 않을 수 있지만, 프로젝트가 커질수록 그 가치가 분명해질 것입니다. 특히 팀 프로젝트에서는 이러한 구조화된 접근이 협업을 더 쉽게 만들어줄 것입니다.</p>
 <p>코드 구조를 개선하는 것은 항상 trade-off가 존재합니다. 현재 프로젝트의 상황과 팀의 특성을 고려하여 적절한 방식을 선택하는 것이 중요합니다. 저의 경우 API 로직을 분리함으로써 얻은 이점이 초기 설정의 번거로움보다 크다고 판단했고, 실제로 유지보수와 테스트 작성이 훨씬 수월해졌습니다.</p>
 <div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>tip</div><div class="admonitionContent_BuS1"><h2 class="anchor anchorWithStickyNavbar_LWe7" id="분리에-있어서-고려해야-할-요소들">분리에 있어서 고려해야 할 요소들<a href="#분리에-있어서-고려해야-할-요소들" class="hash-link" aria-label="Direct link to 분리에 있어서 고려해야 할 요소들" title="Direct link to 분리에 있어서 고려해야 할 요소들">​</a></h2><ol>
 <li>프로젝트 규모</li>
@@ -124,7 +124,7 @@
 <li>API 재사용 빈도</li>
 </ol><ul>
 <li>높은 재사용성이 필요한 경우: API 로직 분리가 유리</li>
-<li>단순 CRUD: 직 접 통신 방식도 무방</li>
+<li>단순 CRUD: 직접 통신 방식도 무방</li>
 </ul></div></div></div></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/zora_story/en/docs/Vue.js/trouble-shooting/iOS 자동 키보드 활성화와 보안 이슈"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">iOS autofocus 활성화와 보안 이슈</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/zora_story/en/docs/Vue.js/Vue directive/Vue directive"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Vue directive</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#고민" class="table-of-contents__link toc-highlight">고민</a></li><li><a href="#더-나은-구조를-찾아서" class="table-of-contents__link toc-highlight">더 나은 구조를 찾아서</a></li><li><a href="#구조-개선의-실질적-이점" class="table-of-contents__link toc-highlight">구조 개선의 실질적 이점</a></li><li><a href="#결론-작은-변화가-가져올-큰-차이" class="table-of-contents__link toc-highlight">결론: 작은 변화가 가져올 큰 차이</a></li><li><a href="#분리에-있어서-고려해야-할-요소들" class="table-of-contents__link toc-highlight">분리에 있어서 고려해야 할 요소들</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/zora_story/en/docs/intro">Docs - Main</a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/Programmer-JK" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://portfolio-programmer-jks-projects.vercel.app/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Portfolio<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 ProjectJK. Built with Docusaurus.</div></div></div></footer></div>
 </body>
 </html>

@@ -10,7 +10,7 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="JK StudyHouse" href="/zora_story/opensearch.xml"><link rel="stylesheet" href="/zora_story/assets/css/styles.5f9bc57f.css">
-<script src="/zora_story/assets/js/runtime~main.130c6948.js" defer="defer"></script>
+<script src="/zora_story/assets/js/runtime~main.a2a1a52b.js" defer="defer"></script>
 <script src="/zora_story/assets/js/main.b1fcfd6e.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -53,14 +53,14 @@
   skip<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="조건부-조회">조건부 조회<a href="#조건부-조회" class="hash-link" aria-label="조건부 조회에 대한 직접 링크" title="조건부 조회에 대한 직접 링크">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="조건부-조회">조건부 조회<a href="#조건부-조회" class="hash-link" aria-label="조건부 조회에 대한 직접 링크" title="조건부 조회  에 대한 직접 링크">​</a></h3>
 <pre tabindex="0" class="codeBlockStandalone_MEMb thin-scrollbar language-typescript codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token keyword">const</span> users <span class="token operator">=</span> <span class="token keyword control-flow">await</span> prisma<span class="token punctuation">.</span><span class="token property-access">user</span><span class="token punctuation">.</span><span class="token method function property-access">findMany</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
   where<span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token constant">OR</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> email<span class="token operator">:</span> <span class="token punctuation">{</span> contains<span class="token operator">:</span> <span class="token string">&quot;test&quot;</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> name<span class="token operator">:</span> <span class="token punctuation">{</span> contains<span class="token operator">:</span> <span class="token string">&quot;홍&quot;</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="관계-포함-조회">관계 포함 조회<a href="#관계-포함-조회" class="hash-link" aria-label="관계 포함 조회에 대한 직  접 링크" title="관계 포함 조회에 대한 직접 링크">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="관계-포함-조회">관계 포함 조회<a href="#관계-포함-조회" class="hash-link" aria-label="관계 포함 조회에 대한 직접 링크" title="관계 포함 조회에 대한 직접 링크">​</a></h3>
 <pre tabindex="0" class="codeBlockStandalone_MEMb thin-scrollbar language-typescript codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token keyword">const</span> userWithPosts <span class="token operator">=</span> <span class="token keyword control-flow">await</span> prisma<span class="token punctuation">.</span><span class="token property-access">user</span><span class="token punctuation">.</span><span class="token method function property-access">findUnique</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
   where<span class="token operator">:</span> <span class="token punctuation">{</span> id<span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
   include<span class="token operator">:</span> <span class="token punctuation">{</span>

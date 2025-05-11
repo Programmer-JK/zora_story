@@ -10,7 +10,7 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="JK StudyHouse" href="/zora_story/opensearch.xml"><link rel="stylesheet" href="/zora_story/assets/css/styles.5f9bc57f.css">
-<script src="/zora_story/assets/js/runtime~main.130c6948.js" defer="defer"></script>
+<script src="/zora_story/assets/js/runtime~main.a2a1a52b.js" defer="defer"></script>
 <script src="/zora_story/assets/js/main.b1fcfd6e.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -27,7 +27,7 @@ bind-address <span class="token operator">=</span> <span class="token number">0.
 server-id <span class="token operator">=</span> <span class="token number">1</span>
 log_bin <span class="token operator">=</span> /var/log/mysql/mysql-bin.log
 </code></pre>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2-slave-  서버-설정">2. Slave 서버 설정<a href="#2-slave-서버-설정" class="hash-link" aria-label="2. Slave 서버 설정에 대한 직접 링크" title="2. Slave 서버 설정에 대한 직접 링크">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2-slave-서버- 설정">2. Slave 서버 설정<a href="#2-slave-서버-설정" class="hash-link" aria-label="2. Slave 서버 설정에 대한 직접 링크" title="2. Slave 서버 설정에 대한 직접 링크">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="21-mysql-설정-파일-수정">2.1 MySQL 설정 파일 수정<a href="#21-mysql-설정-파일-수정" class="hash-link" aria-label="2.1 MySQL 설정 파일 수정에 대한 직접 링크" title="2.1 MySQL 설정 파일 수정에 대한 직접 링크">​</a></h3>
 <pre tabindex="0" class="codeBlockStandalone_MEMb thin-scrollbar language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token comment"># MySQL 설정 파일 수정</span>
 <span class="token function">sudo</span> <span class="token function">nano</span> /etc/mysql/mysql.conf.d/mysqld.cnf
@@ -52,7 +52,7 @@ mysqldump -u root -p --all-databases --master-data <span class="token operator">
 <span class="token comment"># Slave에서 덤프 복원</span>
 mysql -u root -p <span class="token operator">&lt;</span> /tmp/dbdump.sql
 </code></pre>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="33-slave-복제-설정">3.3 Slave 복제 설정<a href="#33-slave-복제-설정" class="hash-link" aria-label="3.3 Slave 복제 설정에 대한 직접 링크" title="3.3 Slave 복제 설정에 대한 직접 링크">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="33-slave-복제-설정">3.3 Slave 복제 설정<a href="#33-slave-복제-설정" class="hash-link" aria-label="3.3 Slave 복제 설  정에 대한 직접 링크" title="3.3 Slave 복제 설정에 대한 직접 링크">​</a></h3>
 <pre tabindex="0" class="codeBlockStandalone_MEMb thin-scrollbar language-sql codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token comment">-- Master 상태 확인</span>
 <span class="token keyword">SHOW</span> MASTER <span class="token keyword">STATUS</span><span class="token punctuation">;</span>
 
@@ -66,7 +66,7 @@ CHANGE MASTER <span class="token keyword">TO</span>
 <span class="token keyword">START</span> SLAVE<span class="token punctuation">;</span>
 </code></pre>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="4-복제-상태-모니터링-및-문제-해결">4. 복제 상태 모니터링 및 문제 해결<a href="#4-복제-상태-모니터링-및-문제-해결" class="hash-link" aria-label="4. 복제 상태 모니터링 및 문제 해결에 대한 직접 링크" title="4. 복제 상태 모니터링 및 문제 해결에 대한 직접 링크">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="41-상태-확인-명령어">4.1 상태 확인 명령어<a href="#41-상태-확인-명령어" class="hash-link" aria-label="4.1 상태 확인 명령어에 대한 직접 링크" title="4.1 상태 확인 명령어에 대한 직접 링크">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="41-상태-확인-명령어">4.1 상태 확인 명령어<a href="#41-상태-확인-명령어" class="hash-link" aria-label="4.1 상태 확인 명령어에 대  한 직접 링크" title="4.1 상태 확인 명령어에 대한 직접 링크">​</a></h3>
 <pre tabindex="0" class="codeBlockStandalone_MEMb thin-scrollbar language-sql codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token comment">-- 복제 상태 확인</span>
 <span class="token keyword">SHOW</span> SLAVE <span class="token keyword">STATUS</span>\G
 
@@ -142,7 +142,7 @@ CHANGE MASTER <span class="token keyword">TO</span> <span class="token punctuati
 <span class="token keyword">SET</span> <span class="token keyword">GLOBAL</span> expire_logs_days <span class="token operator">=</span> <span class="token number">7</span><span class="token punctuation">;</span>  <span class="token comment">-- MySQL 5.7 이하</span>
 <span class="token keyword">SET</span> <span class="token keyword">GLOBAL</span> binlog_expire_logs_seconds <span class="token operator">=</span> <span class="token number">604800</span><span class="token punctuation">;</span>  <span class="token comment">-- MySQL 8.0 이상 (7일)</span>
 </code></pre>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="52-영구-설정-변경">5.2 영구 설정 변경<a href="#52-영구-설정-변경" class="hash-link" aria-label="5.2 영구 설정 변경에 대한 직접 링크" title="5.2 영구 설정 변경에 대한 직접 링크">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="52-영구-설정-변경">5.2 영구 설정 변경<a href="#52-영구-설정-변경" class="hash-link" aria-label="5.2  영구 설정 변경에 대한 직접 링크" title="5.2 영구 설정 변경에 대한 직접 링크">​</a></h3>
 <pre tabindex="0" class="codeBlockStandalone_MEMb thin-scrollbar language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token comment"># MySQL 설정 파일 수정</span>
 <span class="token function">sudo</span> <span class="token function">nano</span> /etc/mysql/mysql.conf.d/mysqld.cnf
 

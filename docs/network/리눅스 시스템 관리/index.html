@@ -10,7 +10,7 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="JK StudyHouse" href="/zora_story/opensearch.xml"><link rel="stylesheet" href="/zora_story/assets/css/styles.5f9bc57f.css">
-<script src="/zora_story/assets/js/runtime~main.130c6948.js" defer="defer"></script>
+<script src="/zora_story/assets/js/runtime~main.a2a1a52b.js" defer="defer"></script>
 <script src="/zora_story/assets/js/main.b1fcfd6e.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -26,7 +26,7 @@
 <span class="token comment"># CentOS/RHEL</span>
 <span class="token function">sudo</span> yum <span class="token function">install</span> net-tools
 </code></pre>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="네트워크-서비스-제어">네트 워크 서비스 제어<a href="#네트워크-서비스-제어" class="hash-link" aria-label="네트워크 서비스 제어에 대한 직접 링크" title="네트워크 서비스 제어에 대한 직접 링크">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="네트워크-서비스-제어">네트워크 서비스 제어<a href="#네트워크-서비스-제어" class="hash-link" aria-label="네트워크 서비스 제어에 대한 직접 링크" title="네트워크 서비스 제어에 대한 직접 링크">​</a></h3>
 <pre tabindex="0" class="codeBlockStandalone_MEMb thin-scrollbar language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token comment"># NetworkManager 제어</span>
 <span class="token function">sudo</span> systemctl start NetworkManager
 <span class="token function">sudo</span> systemctl stop NetworkManager
@@ -89,7 +89,7 @@ nameserver <span class="token number">8.8</span>.4.4
 </ul>
 </li>
 </ol>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4-주요-패  키지-기능">4. 주요 패키지 기능<a href="#4-주요-패키지-기능" class="hash-link" aria-label="4. 주요 패키지 기능에 대한 직접 링크" title="4. 주요 패키지 기능에 대한 직접 링크">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4-주요-패키지-기능">4. 주요 패키지 기능<a href="#4-주요-패키지-기능" class="hash-link" aria-label="4. 주요 패키지 기능에 대한 직접 링크" title="4. 주요 패키지 기능에 대한 직접 링크">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="시스템-관리-도구">시스템 관리 도구<a href="#시스템-관리-도구" class="hash-link" aria-label="시스템 관리 도구에 대한 직접 링크" title="시스템 관리 도구에 대한 직접 링크">​</a></h3>
 <ul>
 <li><strong>dialog</strong>: 대화형 UI 도구</li>
@@ -166,7 +166,7 @@ systemctl status systemd-resolved
 resolvectl status
 </code></pre>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="9-netplan을-통한-네트워크-설정">9. Netplan을 통한 네트워크 설정<a href="#9-netplan을-통한-네트워크-설정" class="hash-link" aria-label="9. Netplan을 통한 네트워크 설정에 대한 직접 링크" title="9. Netplan을 통한 네트워크 설정에 대한 직접 링크">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="기본-설정">기본 설정<a href="#기본-설정" class="hash-link" aria-label="기본 설정에 대한 직접  링크" title="기본 설정에 대한 직접 링크">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="기본-설정">기본 설정<a href="#기본-설정" class="hash-link" aria-label="기본 설정에 대한 직접 링크" title="기본 설정에 대한 직접 링크">​</a></h3>
 <pre tabindex="0" class="codeBlockStandalone_MEMb thin-scrollbar language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token comment"># 설정 파일 권한 설정</span>
 <span class="token function">sudo</span> <span class="token function">chmod</span> <span class="token number">600</span> /etc/netplan/01-network-manager-all.yaml
 

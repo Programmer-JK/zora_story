@@ -10,7 +10,7 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="JK StudyHouse" href="/zora_story/opensearch.xml"><link rel="stylesheet" href="/zora_story/assets/css/styles.5f9bc57f.css">
-<script src="/zora_story/assets/js/runtime~main.130c6948.js" defer="defer"></script>
+<script src="/zora_story/assets/js/runtime~main.a2a1a52b.js" defer="defer"></script>
 <script src="/zora_story/assets/js/main.b1fcfd6e.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -111,7 +111,7 @@
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="3-react의-성능-최적화-트리오-memo-usememo-usecallback">3. React의 성능 최적화 트리오: memo, useMemo, useCallback<a href="#3-react의-성능-최적화-트리오-memo-usememo-usecallback" class="hash-link" aria-label="3. React의 성능 최적화 트리오: memo, useMemo, useCallback에 대한 직접 링크" title="3. React의 성능 최적화 트리오: memo, useMemo, useCallback에 대한 직접 링크">​</a></h2>
 <p>React 애플리케이션의 성능을 최적화하는 세 가지 핵심 도구에 대해 알아보겠습니다.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="reactmemo">React.memo<a href="#reactmemo" class="hash-link" aria-label="React.memo에 대한 직접 링크" title="React.memo에 대한 직접 링크">​</a></h3>
-<p>컴포넌트의 props가 변경되지 않았다 면 리렌더링을 방지합니다.</p>
+<p>컴포넌트의 props가 변경되지 않았다면 리렌더링을 방지합니다.</p>
 <pre tabindex="0" class="codeBlockStandalone_MEMb thin-scrollbar language-jsx codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token keyword">const</span> <span class="token maybe-class-name">ExpensiveComponent</span> <span class="token operator">=</span> <span class="token maybe-class-name">React</span><span class="token punctuation">.</span><span class="token method function property-access">memo</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> data <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
   <span class="token comment">// 복잡한 렌더링 로직</span>
   <span class="token keyword control-flow">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span><span class="token comment">/* 렌더링 결과 */</span><span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">;</span>
@@ -202,7 +202,7 @@
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="6-usecontext-전역-상태-관리의-강력함과-주의점">6. useContext: 전역 상태 관리의 강력함과 주의점<a href="#6-usecontext-전역-상태-관리의-강력함과-주의점" class="hash-link" aria-label="6. useContext: 전역 상태 관리의 강력함과 주의점에 대한 직접 링크" title="6. useContext: 전역 상태 관리의 강력함과 주의점에 대한 직접 링크">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="6-usecontext-전역-상태-관리의-강력함과-주의점">6. useContext: 전역 상태 관리의 강력함과 주의점<a href="#6-usecontext-전 역-상태-관리의-강력함과-주의점" class="hash-link" aria-label="6. useContext: 전역 상태 관리의 강력함과 주의점에 대한 직접 링크" title="6. useContext: 전역 상태 관리의 강력함과 주의점에 대한 직접 링크">​</a></h2>
 <p>Context API를 통한 상태 관리의 장단점을 알아보겠습니다.</p>
 <pre tabindex="0" class="codeBlockStandalone_MEMb thin-scrollbar language-jsx codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token keyword">const</span> <span class="token maybe-class-name">ThemeContext</span> <span class="token operator">=</span> <span class="token maybe-class-name">React</span><span class="token punctuation">.</span><span class="token method function property-access">createContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
@@ -224,7 +224,7 @@
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="주의사항-1">주의사항<a href="#주의사항-1" class="hash-link" aria-label="주의사항에 대한 직접 링크" title="주의사항에 대한 직접 링크">​</a></h3>
 <ol>
 <li>Context 값 변경 시 모든 소비자 컴포넌트가 리렌더링됨</li>
-<li>성능 최적화를 위 한 적절한 Context 분리 필요</li>
+<li>성능 최적화를 위한 적절한 Context 분리 필요</li>
 <li>상태 업데이트 로직의 중앙화 필요</li>
 </ol>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="7-복잡한-컴포넌트-설계-원칙">7. 복잡한 컴포넌트 설계 원칙<a href="#7-복잡한-컴포넌트-설계-원칙" class="hash-link" aria-label="7. 복잡한 컴포넌트 설계 원칙에 대한 직접 링크" title="7. 복잡한 컴포넌트 설계 원칙에 대한 직접 링크">​</a></h2>
@@ -376,7 +376,7 @@
 <span class="token punctuation">}</span>
 </code></pre>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="10-virtual-dom과-성능-최적화">10. Virtual DOM과 성능 최적화<a href="#10-virtual-dom과-성능-최적화" class="hash-link" aria-label="10. Virtual DOM과 성능 최적화에 대한 직접 링크" title="10. Virtual DOM과 성능 최적화에 대한 직접 링크">​</a></h2>
-<p>React의 Virtual DOM이 어떻게 성능을 최적화하는지 살펴보겠습니다.</p>
+<p>React의 Virtual DOM이 어떻게 성능을 최적화 하는지 살펴보겠습니다.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="virtual-dom의-작동-원리">Virtual DOM의 작동 원리<a href="#virtual-dom의-작동-원리" class="hash-link" aria-label="Virtual DOM의 작동 원리에 대한 직접 링크" title="Virtual DOM의 작동 원리에 대한 직접 링크">​</a></h3>
 <ol>
 <li>상태 변경 발생</li>
